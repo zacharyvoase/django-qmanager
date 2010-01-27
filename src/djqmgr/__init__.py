@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = '0.1'
+__version__ = '0.1.1'
 
 from django.db import models
 
@@ -54,7 +54,6 @@ class QManager(models.Manager):
             assert not (query or kwargs), "A query is already specified for this QManager"
             return models.Manager.__new__(cls)
         
-        assert bool(query) ^ bool(kwargs), "Give either a query or some filter arguments"
         if query is None:
             query = kwargs
         
