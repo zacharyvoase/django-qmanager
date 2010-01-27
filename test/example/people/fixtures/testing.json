@@ -1,0 +1,74 @@
+[
+ {
+  "pk": 1, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "m", 
+   "age": 17
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "f", 
+   "age": 17
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "u", 
+   "age": 17
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "m", 
+   "age": 18
+  }
+ }, 
+ {
+  "pk": 5, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "f", 
+   "age": 18
+  }
+ }, 
+ {
+  "pk": 6, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "u", 
+   "age": 18
+  }
+ }, 
+ {
+  "pk": 7, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "m", 
+   "age": 19
+  }
+ }, 
+ {
+  "pk": 8, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "f", 
+   "age": 19
+  }
+ }, 
+ {
+  "pk": 9, 
+  "model": "people.person", 
+  "fields": {
+   "gender": "u", 
+   "age": 19
+  }
+ }
+]

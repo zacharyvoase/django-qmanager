@@ -1,0 +1,44 @@
+<!--*-markdown-*-->
+
+# `django-qmanager`
+
+`django-qmanager` is a reusable Django application which allows you to create managers for Django models, based on pre-defined queries. It leverages Django's `Q` object (`django.db.models.Q`) to allow for rich expressions, without having to go through the rigmarole of sub-classing `django.db.models.Manager` and overriding `get_query_set()`. Easy things should be easy.
+
+## Installation
+
+The usual:
+
+    easy_install django-qmanager # OR
+    pip install django-qmanager
+
+The only other thing you'll need is Django itself.
+
+## Usage
+
+Basic usage is as follows:
+
+    from django.db import models
+    from djqmgr import QManager
+    
+    class Person(models.Model):
+    
+        GENDERS = (
+            ('m', 'Male'),
+            ('f', 'Female'),
+            ('u', 'Unspecified'),
+        )
+        
+        age = models.PositiveIntegerField()
+        gender = models.CharField(max_length=1, choices=GENDERS)
+        
+        objects = models.Manager()
+        
+        minors = QManager(age__lt=18)
+        adults = ~minors
+        
+        men = QManager(gender='m')
+        women = QManager(gender='f')
+        specified = men | women
+        unspecified = ~(men | women)
+
+Note that you can invert and combine `QManager` instances as you can `Q` objects, and the binary *or* and *and* operators (via `|` and `&`) can accept other `QManager` objects, `Q` objects, and dictionaries.
