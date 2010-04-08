@@ -27,7 +27,7 @@ setup(
     version          = get_version(),
     author           = "Zachary Voase",
     author_email     = "zacharyvoase@me.com",
-    url              = 'http://bitbucket.org/zacharyvoase/django-qmanager',
+    url              = 'http://github.com/zacharyvoase/django-qmanager',
     description      = "Create managers for Django models based on pre-defined queries.",
     packages         = find_packages(where='src'),
     package_dir      = {'': 'src'},

@@ -1,5 +1,3 @@
-<!--*-markdown-*-->
-
 # `django-qmanager`
 
 `django-qmanager` is a reusable Django application which allows you to create managers for Django models, based on pre-defined queries. It leverages Django's `Q` object (`django.db.models.Q`) to allow for rich expressions, without having to go through the rigmarole of sub-classing `django.db.models.Manager` and overriding `get_query_set()`. Easy things should be easy.
